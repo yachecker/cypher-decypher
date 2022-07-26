@@ -1,5 +1,5 @@
 import os
-import sys
+import codecs
 from createCode import createCode
 
 global length
@@ -9,7 +9,7 @@ while True:
     try:
         if os.path.exists(os.path.dirname(os.path.realpath(__file__))+'\coding.txt'):
             print('Successfully found coding.txt. Reading cypher')
-            with open('coding.txt', 'r') as f:
+            with codecs.open('coding.txt', 'r','utf-8') as f:
                 # f.read('coding.txt')
                 lines = f.readlines()
                 #print(lines)

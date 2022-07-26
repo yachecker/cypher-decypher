@@ -1,6 +1,6 @@
 import random
 global chars
-chars = ',`qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM;\'1234567890@#$%^&*()!'
+chars = ',`qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM;\'1234567890@#$%^&*()!йцукенгшщзфывапролдяячсмитьбюЙЦУКЕНГШЩЗФЫВАПРОЛДЯЧСМИТЬБЮ'
 global whitespace
 whitespace = ''
 
@@ -16,13 +16,13 @@ def randomChars(stringLength):
 
 
 symbols = {}
-
+import codecs
 
 def createCode(stringLength):
     global whitespace
     for i in range(0, len(chars)):
         symbols[chars[i]] = randomChars(stringLength)
-    with open(f'coding.txt', 'w') as f:
+    with codecs.open(f'coding.txt', 'w','utf-8') as f:
         f.write(f'coding code:\n')
         for key in symbols:
             f.write(f'{key}={symbols[key]}\n')
