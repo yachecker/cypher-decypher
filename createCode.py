@@ -1,7 +1,7 @@
 import codecs
 import random
 global chars
-chars = ',`qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM;\'1234567890@#$%^&*()!йцукенгшщзфывапролдяячсмитьбюЙЦУКЕНГШЩЗФЫВАПРОЛДЯЧСМИТЬБЮ'
+chars = ',`qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM;\'1234567890@#$%^&*(?)!йцукенгшщзфывапролдяячсмитьбюЙЦУКЕНГШЩЗФЫВАПРОЛДЯЧСМИТЬБЮ'
 global whitespace
 whitespace = ''
 

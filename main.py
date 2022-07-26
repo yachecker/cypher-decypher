@@ -51,14 +51,11 @@ def decypher(cypher):
     valueList = list(encoding.values())
     resString = ''
     for i in range(length, len(cypher)+length, length):
-
         if cypher[i-length:i] in encoding.values():
             resString += keyList[valueList.index(cypher[i-length:i])]
 
     return resString
 
 
-cypherString = cypher(testString)
-decypherString = decypher(cypherString)
-print(
-    f'CypherString is:\n{cypherString}\nDecypherString is:\n{decypherString}')
+print(cypher(testString))
+print(decypher(cypher(testString)))
