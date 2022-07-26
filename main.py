@@ -32,7 +32,7 @@ while True:
         print('Failed to read file.')
 
 
-testString = 'Siblings are funny'
+testString = input('Input string to cypher: ')
 
 
 def cypher(string):
