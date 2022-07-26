@@ -10,9 +10,7 @@ while True:
         if os.path.exists(os.path.dirname(os.path.realpath(__file__))+'\coding.txt'):
             print('Successfully found coding.txt. Reading cypher')
             with codecs.open('coding.txt', 'r', 'utf-8') as f:
-                # f.read('coding.txt')
                 lines = f.readlines()
-                # print(lines)
                 length = lines[1].index('\n') - 2
                 for i in range(1, len(lines)):
                     encoding[lines[i][0]] = lines[i][2:length+2].strip('\n')
@@ -39,11 +37,9 @@ testString = input('Input string to cypher: ')
 
 def cypher(string):
     workArray = list(string)
-    # print(workArray)
     res = []
     resString = ''
     for i in range(0, len(workArray)):
-        # print(encoding[workArray[i]])
         res.append(encoding[workArray[i]])
     for i in range(0, len(res)):
         resString += res[i]
@@ -52,9 +48,7 @@ def cypher(string):
 
 def decypher(cypher):
     keyList = list(encoding.keys())
-    #print(f'keylist : {keyList}')
     valueList = list(encoding.values())
-    #print(f'valuelist : {valueList}')
     resString = ''
     for i in range(length, len(cypher)+length, length):
 
